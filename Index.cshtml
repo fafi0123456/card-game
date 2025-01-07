@@ -1,7 +1,4 @@
-@page
-@{
-    ViewData["Title"] = "Demo .NET Core 9.0";
-}
-
-<h1>Chào mừng đến với Demo .NET Core 9.0</h1>
-<p>Đây là ứng dụng demo triển khai trên Azure App Service.</p>
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+app.MapGet("/", () => "Chào mừng đến với Azure App Service!");
+app.Run();
